@@ -34,9 +34,6 @@ body {
   margin-top: .5em;
 }
 
-.content {
-  margin-bottom: 1em;
-}
 
 .wibble {
   font-size: 75%;
@@ -75,6 +72,7 @@ body {
   padding-right: 1em;
   padding: .5em;
   padding-bottom: 1em;
+  box-shadow: 10px 10px 5px #888888;
 }
 
 

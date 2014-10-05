@@ -5,15 +5,36 @@ Meteor.common = {
     if (title) {
       var card = {
         title: title,
-        type: "action"
+        type: "action",
+        visible: true
       };
 
       Cards.insert(card);
       console.log("Card Created");
 
-      cards = Session.get('cards');
-      cards.unshift(card);
-      Session.set('cards', cards);
+
+      $('html, body').animate({
+          scrollTop: ($('#cards').offset().top)
+      },500);
+
+
+    }
+  },
+
+  newProject: function() {
+    var title = prompt("Enter name for new Project:");
+    if (title) {
+      var card = {
+        title: title,
+        type: 'project',
+        visible: true
+      };
+
+      Cards.insert(card);
+
+      $('html, body').animate({
+          scrollTop: ($('#cards').offset().top)
+      },500);
 
     }
   }
