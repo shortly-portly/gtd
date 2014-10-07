@@ -32,6 +32,11 @@ body {
   border-radius: 25px;
   border-width: 1px;
   margin-top: .5em;
+  margin-bottom: 1em;
+}
+
+.content {
+  margin-bottom: 1em;
 }
 
 

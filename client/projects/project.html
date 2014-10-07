@@ -1,6 +1,6 @@
 <template name="project">
 
-  <div class="card-section">
+  <div id={{_id}} class="card-section">
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12">
@@ -37,12 +37,12 @@
           </select>
         </div>
       </div>
-      <div class="row top-buffer">
+      <div class="row top-buffe">
         <div class="col-sm-2 wibble">
           Depends On:
         </div>
       </div>
-      <div class="row">
+      <div class="row content">
         <div class="col-sm-2">
           <select>
             <option value="volvo">Volvo</option>
@@ -100,11 +100,10 @@
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <input type="checkbox">Quite a bit of text
-          <br>
-          <input type="checkbox">Something else
-          <br>
-          <input type="checkbox" name="done" value="complete">This is an example project
+
+          {{#each actionTitle}}
+            <input type="checkbox"> <span class="action-title"> {{title}} </span><br>
+          {{/each}}
           <br>
         </div>
       </div>

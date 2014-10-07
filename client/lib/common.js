@@ -1,6 +1,6 @@
 Meteor.common = {
 
-  newAction: function() {
+  newAction: function(action) {
     var title = prompt("Enter name for new Action:");
     if (title) {
       var card = {
@@ -8,9 +8,14 @@ Meteor.common = {
         type: "action",
         visible: true
       };
+      card = _.extend(card, action);
+    
 
-      Cards.insert(card);
-      console.log("Card Created");
+
+      var id = Cards.insert(card);
+      console.log(id);
+
+      Session.set('id', id);
 
 
       $('html, body').animate({
@@ -30,7 +35,10 @@ Meteor.common = {
         visible: true
       };
 
-      Cards.insert(card);
+      var id = Cards.insert(card);
+      console.log(id);
+
+      Session.set('id', id);
 
       $('html, body').animate({
           scrollTop: ($('#cards').offset().top)

@@ -1,11 +1,13 @@
 <template name="projectList">
-  <select>
-    {{#each projects}}
-      {{> projectOption}}
-    {{/each}}
-  </select>
+  <div class="project-list">
+    <select>
+      {{#each projects}}
+        {{> projectOption}}
+        {{/each}}
+      </select>
+    </div>
 </template>
 
 <template name="projectOption">
-  <option value="{{_id}}">{{title}}</option>
+  <option {{selected}} value="{{_id}}">{{title}}</option>
 </template>
