@@ -14,6 +14,9 @@ Template.project.events({
 
 Template.project.helpers({
   actionTitle: function() {
-    return Cards.find({project: this._id});
+    return Cards.find({project: this._id, type: 'action'});
+  },
+  subProjectTitle: function() {
+    return Cards.find({project: this._id, type: "project"});
   }
 });

@@ -1,0 +1,13 @@
+<template name="subProjectList">
+  <div class="sub-project-list">
+    <select>
+      {{#each projects}}
+        {{> subProjectOption}}
+        {{/each}}
+      </select>
+    </div>
+</template>
+
+<template name="subProjectOption">
+  <option {{selected}} value="{{_id}}">{{title}}</option>
+</template>

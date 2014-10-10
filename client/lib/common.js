@@ -9,7 +9,7 @@ Meteor.common = {
         visible: true
       };
       card = _.extend(card, action);
-    
+
 
 
       var id = Cards.insert(card);
@@ -17,13 +17,33 @@ Meteor.common = {
 
       Session.set('id', id);
 
+    }
+  },
 
-      $('html, body').animate({
-          scrollTop: ($('#cards').offset().top)
-      },500);
+  getSubProjects: function(project) {
+    var results = [];
+    results.push(project);
 
+    subProjects = Cards.find({project: project._id, type: "project"}).fetch();
+
+    while (subProjects.length > 0) {
+      results = results.concat(subProjects);
+      subResults = [];
+
+      _.each(subProjects, function(p) {
+        p = Cards.find({project: p._id, type: "project"}).fetch();
+        if (p.length > 0) {
+          subResults = subResults.concat(p);
+        }
+
+        results = results.concat(subResults);
+
+        subProjects = subResults;
+
+      });
 
     }
+        return results;
   },
 
   newProject: function() {
@@ -39,11 +59,6 @@ Meteor.common = {
       console.log(id);
 
       Session.set('id', id);
-
-      $('html, body').animate({
-          scrollTop: ($('#cards').offset().top)
-      },500);
-
     }
   }
 };
