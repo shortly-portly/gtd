@@ -59,6 +59,7 @@ Meteor.common = {
       console.log(id);
 
       Session.set('id', id);
+      return (id);
     }
   }
 };

@@ -54,8 +54,17 @@ body {
   border-radius: 25px;
   border-width: 1px;
   margin-top: .5em;
+}
+
+
+.corners {
+  border: solid;
+  border-radius: 25px;
+  border-width: 1px;
+  margin-top: .5em;
 
 }
+
 
 .action-type a {
   border: solid;
@@ -80,8 +89,30 @@ body {
   box-shadow: 10px 10px 5px #888888;
 }
 
+.editbar {
+
+  border-width: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 
 .bottom-border {
   border-bottom: solid;
   border-width: 1px;
+}
+
+.push-right {
+  text-align: right;
+}
+
+.menu,
+.menu a {
+  color: white;
+}
+
+.visible,
+.visible a {
+  color: gray;
 }

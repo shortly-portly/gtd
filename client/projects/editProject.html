@@ -1,0 +1,45 @@
+<template name="editProject">
+  {{> editMenu}}
+
+  
+  <div id={{_id}} class="card-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          Title:
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <form action="">
+            <h4>
+              <input class="corners form-control" type="text" value="{{title}}">
+            </h4>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div id={{_id}} class="notes">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        Notes:
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <form action="">
+          <h4>
+            <input class="corners form-control bottom-border" type="textarea" value="Some Notes">
+          </h4>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</template>
