@@ -11,6 +11,7 @@ Template.project.events({
       Session.set('id', this._id);
     },
     'dblclick .notes': function() {
+
       Cards.update(this._id, {$set: {type: 'editProject'}});
     }
 });

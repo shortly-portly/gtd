@@ -11,4 +11,5 @@ Template.cardDetail.events({
   'mouseleave .card': function(event) {
     $(event.target).find('.menu').removeClass('visible');
   }
+
 });
