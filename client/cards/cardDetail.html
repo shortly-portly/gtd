@@ -1,8 +1,11 @@
 <template name="cardDetail">
   <div class="card">
 
-
-    {{> UI.dynamic template=type}}
+    {{#if viewing}}
+      {{> UI.dynamic template=type}}
+    {{else}}
+      {{> editCard}}
+    {{/if}}
   </div>
 
 </template>

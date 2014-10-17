@@ -4,15 +4,10 @@ Template.project.events({
     },
     'click .action-title': function() {
       if (!this.visible) {
-        console.log("opening up");
         Cards.update(this._id, {$set: {visible: true}});
       }
 
       Session.set('id', this._id);
-    },
-    'dblclick .notes': function() {
-
-      Cards.update(this._id, {$set: {type: 'editProject'}});
     }
 });
 

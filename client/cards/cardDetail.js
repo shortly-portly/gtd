@@ -10,6 +10,19 @@ Template.cardDetail.events({
   },
   'mouseleave .card': function(event) {
     $(event.target).find('.menu').removeClass('visible');
-  }
+  },
+  'dblclick .card': function () {
+    Cards.update(this._id, {$set: {mode: 'edit'}});  }
 
+});
+
+Template.cardDetail.helpers({
+  'viewing': function() {
+    if (this.mode == 'view') {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
 });

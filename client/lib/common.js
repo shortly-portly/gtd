@@ -6,6 +6,7 @@ Meteor.common = {
       var card = {
         title: title,
         type: "action",
+        mode: 'view',
         visible: true
       };
       card = _.extend(card, action);
@@ -52,6 +53,7 @@ Meteor.common = {
       var card = {
         title: title,
         type: 'project',
+        mode: 'view',
         visible: true
       };
 
