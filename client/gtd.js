@@ -13,3 +13,5 @@ UI.body.helpers ({
     Session.set('id', null);
   }
 });
+
+Meteor.subscribe('cards');
