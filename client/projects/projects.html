@@ -1,0 +1,38 @@
+<template name="projects">
+  {{> viewMenu}}
+
+  <div id={{_id}} class="card-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <h4>
+              Project Dashboard
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid content">
+    <div class="row top-buffer">
+
+      <div class="col-sm-4">
+        <div class="bottom-border">
+          <b>Active Projects:</b><b><a href="#" class="new-action"> + </a></b>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="bottom-border">
+          <b>Completed Projects:</b>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        {{> projectsList}}
+        <br>
+      </div>
+    </div>
+  </div>
+</template>
