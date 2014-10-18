@@ -9,19 +9,26 @@ Meteor.common = {
         mode: 'view',
         visible: true
       };
-      console.log('card..');
-      console.log(card);
-      console.log('action');
-      console.log(action);
+
       card = _.extend(card, action);
-
-
 
       var id = Cards.insert(card);
       console.log(id);
 
       Session.set('id', id);
 
+    }
+  },
+
+  newContact: function() {
+    var name = prompt("Enter contact name:");
+    if (name) {
+      var data = {
+        name: name
+      };
+
+      var id = People.insert(data);
+      return (id);
     }
   },
 

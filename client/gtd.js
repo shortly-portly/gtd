@@ -15,3 +15,4 @@ UI.body.helpers ({
 });
 
 Meteor.subscribe('cards');
+Meteor.subscribe('people');

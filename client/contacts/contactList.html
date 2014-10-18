@@ -1,0 +1,15 @@
+<template name="contactList">
+  <div class="contact-list">
+    <select>
+      <option {{selected}} value="none">-</option>
+      <option value="new">New Contact...</option>
+      {{#each contacts}}
+        {{> contactOption}}
+        {{/each}}
+      </select>
+    </div>
+</template>
+
+<template name="contactOption">
+  <option {{selected}} value="{{_id}}">{{name}}</option>
+</template>
