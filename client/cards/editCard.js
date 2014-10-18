@@ -11,8 +11,8 @@ Template.editCard.events({
 
   'click .save-card': function(event, template) {
     var title = template.find("input[name=title]");
-    var text = template.find("input[name=notes]");
-  
+    var text = template.find("textarea[name=notes]");
+
     var data = {
       title: title.value,
       notes: text.value,

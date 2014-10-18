@@ -52,13 +52,28 @@
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <p>{{notes}}</p>
+        {{> actionJournal}}
         </div>
       </div>
-
     </div>
   </div>
 
+
+  <div class="container-fluid">
+        <div class="row">
+
+        <form action="">
+          <h4>
+            <div class="col-sm-11">
+            <textarea class="corners form-control bottom-border" name='journal' type="textarea"></textarea>
+          </div>
+            <button type="submit" class="corners btn btn-default update-journal">Update</button>
+          </h4>
+        </form>
+
+    </div>
+
+</div>
 
 
 </template>

@@ -116,3 +116,16 @@ body {
 .visible a {
   color: gray;
 }
+
+pre {
+  border: none;
+  background: #FFFFAA;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+.journalEntry {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+
+}
