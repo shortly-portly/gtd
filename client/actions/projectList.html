@@ -1,6 +1,8 @@
 <template name="projectList">
   <div class="project-list">
     <select>
+      <option {{selected}} value="none">-</option>
+      <option value="new">New Project...</option>
       {{#each projects}}
         {{> projectOption}}
         {{/each}}

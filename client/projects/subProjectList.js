@@ -27,6 +27,12 @@ Template.subProjectList.events ({
     var newValue = $(event.target).val();
     console.log("sub-project change");
 
+    if (newValue == "none") {
+      console.log("deleting the project reference");
+      Cards.update(this._id, {$unset: {project: ""}});
+      return;
+    }
+
     if (newValue == "new") {
       newValue = Meteor.common.newProject();
     }

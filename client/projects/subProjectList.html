@@ -1,7 +1,7 @@
 <template name="subProjectList">
   <div class="sub-project-list">
     <select>
-      <option {{selected}} value="0">-</option>
+      <option {{selected}} value="none">-</option>
       <option value="new">New Project...</option>
       {{#each projects}}
         {{> subProjectOption}}

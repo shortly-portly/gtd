@@ -1,8 +1,10 @@
 Template.header.events({
     'click .new-action': function() {
-      Meteor.common.newAction();
+      var newAction = {};
+      Meteor.common.newAction(newAction);
     },
     'click .new-project': function() {
-      Meteor.common.newProject();
+      var newProject = {};
+      Meteor.common.newProject(newProject);
     }
 });
