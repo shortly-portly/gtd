@@ -37,5 +37,18 @@ Template.subProjectList.events ({
       newValue = Meteor.common.newProject();
     }
     Cards.update(this._id, {$set: {project: newValue}});
+  },
+  'click .sub-project': function(event) {
+    event.preventDefault();
+
+    if (this.project) {
+
+      var subProject = Cards.findOne(this.project);
+      if (!subProject.visible) {
+        Cards.update(subProject._id, {$set: {visible: true}});
+      }
+
+      Session.set('id', subProject._id);
+    }
   }
 });

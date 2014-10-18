@@ -3,7 +3,6 @@ UI.body.helpers ({
     var id = Session.get("id");
 
     if (id) {
-      console.log("id found");
       $('html, body').animate({
           scrollTop: ($('#' + id).offset().top)
       },500);

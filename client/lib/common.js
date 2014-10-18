@@ -13,7 +13,6 @@ Meteor.common = {
       card = _.extend(card, action);
 
       var id = Cards.insert(card);
-      console.log(id);
 
       Session.set('id', id);
 
