@@ -1,8 +1,8 @@
 <template name="actionJournal">
   {{#each journalEntry}}
   <div class="journalEntry">
-    <h5>{{displayDate}}</h5>
-      <pre>{{text}}</pre>
+    <p><u>{{{displayDate}}}</u></p>
+      {{#markdown}}{{text}}{{/markdown}}
   </div>
   {{/each}}
 </template>
