@@ -1,0 +1,16 @@
+<template name="dependentList">
+  <div class="dependent-action-list">
+    <select>
+      <option {{selected}} value="none">-</option>
+      <option value="new">New Action...</option>
+      {{#each actions}}
+        {{> dependentAction}}
+        {{/each}}
+      </select>
+      <a class="dependent-action" href="#">>></a>
+    </div>
+</template>
+
+<template name="dependentAction">
+  <option {{selected}} value="{{_id}}">{{title}}</option>
+</template>
