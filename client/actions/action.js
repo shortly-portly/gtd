@@ -21,5 +21,8 @@ Template.action.events({
 
     text.value = "";
 
+  },
+  'click .complete-action': function() {
+    console.log('checkd');
   }
 });

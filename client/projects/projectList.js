@@ -4,15 +4,6 @@ Template.projectList.helpers ({
 }
 });
 
-Template.projectList.events ({
-  'change .project-list': function (event) {
-
-    var newValue = $(event.target).val();
-
-
-    Cards.update(this._id, {$set: {project: newValue}});
-  }
-});
 
 Template.projectList.events ({
   'change .project-list': function (event) {
