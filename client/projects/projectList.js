@@ -9,10 +9,17 @@ Template.projectList.events ({
   'change .project-list': function (event) {
 
     var newValue = $(event.target).val();
-    console.log("sub-project change");
+
+    /* if changing projects then remove any dependent action
+    /* probably need to do this for actions that are dependent on this action as
+    /* well */
+
+    Cards.update(this._id, {$unset: {dependent: ""}});
+    Meteor.call("removeDependents", this._id);
+    /* Cards.update({dependent: this._id}, {$set: {dependent: ""}}); */
+
 
     if (newValue == "none") {
-      console.log("deleting the project reference");
       Cards.update(this._id, {$unset: {project: ""}});
       return;
     }

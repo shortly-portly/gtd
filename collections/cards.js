@@ -11,3 +11,9 @@ Cards.allow({
     return true;
   }
 });
+
+Meteor.methods ({
+  removeDependents: function(id) {
+    Cards.update({dependent: id}, {$set: {dependent: ""}});
+  }
+});

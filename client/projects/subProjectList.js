@@ -3,7 +3,6 @@ Template.subProjectList.helpers ({
     var projects = Cards.find({type: "project"}).fetch();
     var project = this;
 
-
     /* Get the list of all sub projects for ths project */
     var subProjects = Meteor.common.getSubProjects(project);
 
@@ -25,10 +24,8 @@ Template.subProjectList.events ({
   'change .sub-project-list': function (event) {
 
     var newValue = $(event.target).val();
-    console.log("sub-project change");
 
     if (newValue == "none") {
-      console.log("deleting the project reference");
       Cards.update(this._id, {$unset: {project: ""}});
       return;
     }

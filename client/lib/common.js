@@ -16,6 +16,8 @@ Meteor.common = {
 
       Session.set('id', id);
 
+      return id;
+
     }
   },
 
@@ -48,8 +50,10 @@ Meteor.common = {
         }
 
         results = results.concat(subResults);
+        
 
         subProjects = subResults;
+        /* blah */
 
       });
 

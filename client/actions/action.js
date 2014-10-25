@@ -2,7 +2,6 @@ Template.action.events({
   'click .update-journal': function(event, template) {
 
     event.preventDefault();
-    console.log(this);
 
     var text = template.find("textarea[name=journal]");
     if (!text.value) {
